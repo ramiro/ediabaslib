@@ -769,7 +769,7 @@ Additionally the broadcast `de.holeschak.bmw_deep_obd.Action.Command` could be r
 The following intent data is defined:
 
 * `action` (string): Action to be processed by the app:
-  * `new_page:<page_name>`: Switches to the new page (configuration) with the name `<page_name>`. `<page_name>` is the name in the node `<page name ="page_name">`.
+    * `new_page:<page_name>`: Switches to the new page (configuration) with the name `<page_name>`. `<page_name>` is the name in the node `<page name ="page_name">`.
 
 The broadcast could be also received by the [`BroadcastReceived`](#receiving-broadcasts-broadcastreceived) user function.
 

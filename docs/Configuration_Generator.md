@@ -45,7 +45,7 @@ When changing the item type, the search filter is cleared and closed.
 * _Display type_: With his check box a graphical (gauge) display for the results could be enabled. The result will be only displayed if _Graphical design_ is set to value other than hidden.
 * _Font size_: The font size of the displayed data on the main page could be specified in 3 steps (_Small_, _Medium_ and _Large_).
 * _Job list_: Here all available jobs are listed. Only if the job has a check mark it will be executed later. In the area _Comments for job_ the comments for the selected job will be shown.  
- If the BMW database is used, only the known jobs are listed by default. Activating the option _show all jobs_ will display all jobs.
+  If the BMW database is used, only the known jobs are listed by default. Activating the option _show all jobs_ will display all jobs.
 * _Job result_: Here one more more job results could be selected (with a check mark) that will be displayed later on the page) For the currently selected result the data type and comment will be shown below.
 * _Display text_: This is the text that will be displayed on the page beside the job result.
 * _Display order_: Here the index of the display order could be specified. The default value is 0. If two values are identical, the original order is retained.
@@ -56,7 +56,8 @@ When changing the item type, the search filter is cleared and closed.
     * _Simple gauge round_: A simple gauge with round border will be displayed.
     * _Simple gauge with dot_: A simple gauge with round border and a dot instead of bar graph will be displayed.
 
-    For the gauge display the value range _min value_ and _max value_ has to be specified also.
+  For the gauge display the value range _min value_ and _max value_ has to be specified also.
+
 * _Tag for data logging_: If the _Log data_ option is enabled on the main page the result data will get this tag in the log file. If the entry is empty no data will be logged.
 * _Output format_: Here the output format of the result data could be modified. The format specification is in the form of [Ediabas result types and formats](EDIABAS_result_types_and_formats.md). Depending on the job data type more or less result types will be listed.
 * _Read_: This button executes the selected job and displays the result in the specified format next to the button.
