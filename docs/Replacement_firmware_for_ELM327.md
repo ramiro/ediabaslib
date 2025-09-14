@@ -20,7 +20,7 @@ For programming the firmware see: [programming](#programming-elm327-adapter-with
 
 ## Buy a preprogrammed adapter
 You could buy the preprogrammed [Bluetooth adapter](https://www.ebay.de/itm/256599171440) also at EBAY.  
-There are also [Deep OBD OBD-II bluetooth adapters](https://shop.ibus-app.de/detail/index/sArticle/258) for BMW vehicles types `E36`, `E38`, `E39`, `E46`, `E52`, `E53`, `E83` , `E85`, `E86` with a fixed pin 7 + 8 connection available.  
+There are also [Deep OBD OBD-II Bluetooth adapters](https://shop.ibus-app.de/detail/index/sArticle/258) for BMW vehicles types `E36`, `E38`, `E39`, `E46`, `E52`, `E53`, `E83` , `E85`, `E86` with a fixed pin 7 + 8 connection available.  
 Adapters from these links include a **license** for the [BMW coding](BMW_Coding.md) function of one F series or higher vehicle.  
 
 Vehicles `E36`, `E38`, `E39`, `E46`, `E52`, `E53`, `E83` , `E85` and `E86` additionally require a connection between OBD pin 7 and 8 (or a pin7-pin8 adapter) to access all ECUs.  
@@ -70,7 +70,7 @@ Also you can get compiled firmware files from the [latest binary](https://github
 
 ## ELM327 firmware
 There is improved ELM327 V2.3 compatible firmware available. It switches adapter to a mode compatible with most ELM327 software. 
-Flashing can be done over bluetooth with the _[Deep OBD app](Deep_OBD_for_BMW_and_VAG.md)_ (at the moment this is only available for Bluetooth adapters).
+Flashing can be done over Bluetooth with the _[Deep OBD app](Deep_OBD_for_BMW_and_VAG.md)_ (at the moment this is only available for Bluetooth adapters).
 Afterwards you can flash the Deep OBD replacement firmware over Bluetooth firmware again.  
 Binariy files (complete `ELM327V23.X.production.unified.hex`) and (update `ELM327V23.X.production.hex`) could also found in the the [latest binary](https://github.com/uholeschak/ediabaslib/releases/latest) package.
 

@@ -2,7 +2,7 @@
 **To build a Bluetooth adapter now use the [Replacement firmware for ELM327](Replacement_firmware_for_ELM327.md) instead!**  
 You could still use the firmware as a replacement for FTDI based adapters (Only [Steps 1](#step1-replace-the-pld) and [Steps 2](#step2-program-the-processor) is required, the [firmware update](#firmware-update) is also possible).
 
-This chapter describes how to build a D-CAN/K-Line adapter with bluetooth support.  
+This chapter describes how to build a D-CAN/K-Line adapter with Bluetooth support.  
 **This firmware is not supported any more, use it at your own risk!**
 
 There is also an external [flashing manual](https://www.sfbmwcoding.com/files/flashing_compatible_cable_ediabaslib.pdf) available.
@@ -11,8 +11,9 @@ There is also an external [flashing manual](https://www.sfbmwcoding.com/files/fl
 
 Basically two components are required:
 * A standard D-CAN/K-Line Adapter. There are multiple manufactures who sell such adapters which are basically identical. I have used one with a PLCC AFT16V8B, because it's easier to replace the chip.
-* A HC-05 bluetooth board. It's important that it has an integrated 5V to 3.3V power regulator.
-## Step1: Replace the PLD
+* A HC-05 Bluetooth board. It's important that it has an integrated 5V to 3.3V power regulator.
+
+### Step1: Replace the PLD
 A big problem of the standard adapters is the high power consumption which results in a very high inner temperature. The main reason for this is the used PLD type. The ATF16V8B requires 50mA in standby. It's possible to replace this chip with a ATF16V8BQL type, which only requires 5mA. You could remove the existing PLD with hot air and attach a PLCC20 socket instead. With a PLC programmer program the `custom.jed` file into the ATF16V8BQL (The `standard.jed` file is the original program). The custom program adds an additional RXD input to the unused pin 1.
 
 ![](Build_Bluetooth_D-CAN_adapter_PldSmall.png)
@@ -23,7 +24,7 @@ There is a [replacement firmware](https://github.com/uholeschak/ediabaslib/relea
 * Allows configuration of CAN mode all the time, not only after power on.
 * Allows configuration of the CAN parameters (block size and separation time)
 * Correctly displays the ignition status (only available for K-line mode).
-* Allows to read the ignitions status with a telegram, this is required if you want to communicate over bluetooth.
+* Allows to read the ignitions status with a telegram, this is required if you want to communicate over Bluetooth.
 * Contains a bootstrap loader that allows firmware update without opening the device.
 * Reduced power consumption due to use of sleep mode.
 
@@ -63,17 +64,17 @@ If you want to leave the adapter plugged into the OBDII socket, you need a possi
 
 ![](Build_Bluetooth_D-CAN_adapter_PowerSwitchSmall.png)
 
-## Step7: Mount everything together
-Plug the modified HC-05 into it's socket and close the adapter. You should now be able to connect to the adapter via bluetooth from the PC. Make sure you are using a bluetooth chip in the PC and not a USB-TTL converter with HC-05 in master role because this will result in incorrect timing!  
+### Step7: Mount everything together
+Plug the modified HC-05 into it's socket and close the adapter. You should now be able to connect to the adapter via Bluetooth from the PC. Make sure you are using a Bluetooth chip in the PC and not a USB-TTL converter with HC-05 in master role because this will result in incorrect timing!  
 When sending strings to the adapter you should at least get an echo from the adapter, otherwise there is a problem with the connections.  
 You could test reading the ignition pin with the following command (hex values):  
 `82 F1 F1 FE FE 60`  
 The response is (additionally to the echo):  
 `82 F1 F1 FE <state> <checksum>` with state bit 0 set to 1 if ignition is on.  
 
-# Firmware update
-With `UpdateLoader-win32.exe` (application is only in german language) it's possible to update the firmware via bluetooth. Simply select the COM port and the hex file (`CanAdapter.hex`, not `Combined.hex`!) and start update.  
-The update can only be initiated if there is a valid application in the adapter. When the update via bluetooth is not possible any more, connect the adapter via USB, start the update process and power on the adapter (12V).
+## Firmware update
+With `UpdateLoader-win32.exe` (application is only in german language) it's possible to update the firmware via Bluetooth. Simply select the COM port and the hex file (`CanAdapter.hex`, not `Combined.hex`!) and start update.  
+The update can only be initiated if there is a valid application in the adapter. When the update via Bluetooth is not possible any more, connect the adapter via USB, start the update process and power on the adapter (12V).
 
 ![](Build_Bluetooth_D-CAN_adapter_UpdateSmall.png)
 

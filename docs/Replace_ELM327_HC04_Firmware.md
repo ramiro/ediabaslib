@@ -38,8 +38,8 @@ REVS: Y
 * Try to flash CanAdaapterElm.X.production.unified.hex. If it fails with the error "Cannot flash Device-ID", then edit it using Tools->Testmemory to the value in the original hex-file
 
 ## Step3: Testing
-* Repower Elm327 adapter, connect to it over bluetooth and make a pair with it (standard PIN: `1234`)
-* Connect to the bluetooth COM port assigned to the paired device on PC or use Serial Bluetooth Terminal for Android in HEX mode
+* Repower ELM327 adapter, connect to it over Bluetooth and make a pair with it (standard PIN: `1234`)
+* Connect to the Bluetooth COM port assigned to the paired device on PC or use Serial Bluetooth Terminal for Android in HEX mode
 * When sending strings to the adapter you should at least get an echo from the adapter, otherwise there is a problem with the connections.
 Try to read ignition pin state with the following command (hex values):  
 `82 F1 F1 FE FE 60`
