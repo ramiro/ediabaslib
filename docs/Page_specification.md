@@ -11,6 +11,7 @@ Table of contents:
 	* [Control output of the page (UpdateResultList)](#control-output-of-the-page-updateresultlist)
 	* [Executing own jobs (ExecuteJob)](#executing-own-jobs-executejob)
 	* [Adding controls to the layout](#adding-controls-to-the-layout)
+	* [Receiving broadcasts (BroadcastReceived)](#receiving-broadcasts-broadcastreceived)
 * [Grouping pages](#grouping-pages)
 * [The configuration file](#the-configuration-file)
 * [Broadcasts](#broadcasts)
