@@ -31,6 +31,7 @@ Key value pair with request two digit hex bytes separated by comma. No wildcards
 
 Sample with BMW-FAST (OBD or ENET interface) telegrams:
 The request and the response is the full frame including ECU address and checksum (XOR over all bytes).
+
 ```ini
 [REQUEST]
 key1=83,01,F1,19,02,0C
@@ -43,6 +44,7 @@ key2=93,F1,01,62,20,00,01,00,12,28,80,32,80,28,80,31,80,28,01,00,20,28,3E
 
 Sample with DS2 (OBD interface) telegrams:
 The request and the response is the full frame including ECU address in request and response and checksum (sum over all bytes) only in the response.
+
 ```ini
 [REQUEST]
 key1=00,04,00
@@ -55,6 +57,7 @@ key2=00,07,A0,00,05,95,37
 
 Sample ISO 9141 telegrams (EDIC interface, only valid in SGBD simulation file, because of missing ECU address):
 The request and the response is the bare frame without ECU address and checksum.
+
 ```ini
 [KEYBYTES]
 key1=01,8A,00,A0,28,0F,01,F6,34,42,30,39,32,37,31,35,36,42,41,20,03,0F,03,F6,41,47,35,20,30,31,4C,20,34,2E,32,6C,03,0F,05,F6,35,56,20,20,52,64,57,20,31,32,31,34,03,08,07,F6,00,00,02,09,15,03,03,09,09,03
@@ -110,6 +113,7 @@ Example: Calculate XOR checksum of the complete telegram with XOR start value 1:
 
 Sample with UDS ISO 14229 telegrams (EDIC interface) with ECU address 0700:
 The request and the response is the bare frame without ECU address and checksum.
+
 ```ini
 [0700.REQUEST]
 key1=22,06,XX
@@ -125,6 +129,7 @@ key3=6E,00|[01],00|[02]
 Sample with TP2.0 telegrams (EDIC interface) with ECU address 10:
 The request is the bare frame without ECU address and checksum.  
 The response is the full frame including ECU address and checksum (in BMW-FAST format).
+
 ```ini
 [10.REQUEST]
 key1=10,89
@@ -140,6 +145,7 @@ It's valid to use UDS and TP2.0 ECUs in the same simulation file. The ECU addres
 Sample with KWP 2000 telegrams (EDIC interface) with ECU wake address 01:
 The request is the bare frame without ECU address and checksum.  
 The response is the full frame including ECU address and checksum (in BMW-FAST format).
+
 ```ini
 [01.KEYBYTES]
 key1=EF,8F,FE,A0,28
@@ -155,6 +161,7 @@ key2=91,F1,10,5A,91,0E,38,45,30,39,30,37,34,30,31,41,42,20,20,FF,2F
 
 Sample with ISO 9141 (EDIC interface) telegrams with ECU wake address 01:
 The request and the response is the bare frame without ECU address and checksum.
+
 ```ini
 [01.KEYBYTES]
 key1=01,8A,00,A0,28,0F,01,F6,34,42,30,39,32,37,31,35,36,42,41,20,03,0F,03,F6,41,47,35,20,30,31,4C,20,34,2E,32,6C,03,0F,05,F6,35,56,20,20,52,64,57,20,31,32,31,34,03,08,07,F6,00,00,02,09,15,03,03,09,09,03
@@ -172,6 +179,7 @@ It's valid to use ISO 9141 and KWP 2000 ECUs in the same simulation file. The EC
 
 Sample with BMW-FAST (OBD or ENET interface) telegrams:  
 Functional request (`CX` header with bit 6-7 set) and multiple responses. Each response is a full frame including ECU address and checksum.
+
 ```ini
 [REQUEST]
 key1=C4,DF,F1,31,01,0F,06
