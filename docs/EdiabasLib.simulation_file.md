@@ -8,6 +8,7 @@ Simulation files could be auto generated from trace files by the [LogfileConvert
 
 ## Configuration properties
 EdiabasLib has the following properties to configure the simulation mode:
+
 * `Simulation`: 1=Enable simulation mode, default is 0.
 * `SimulationPath`: Path to the simulation directory containing the interface or SGBD simulation files.
 * `SimulationCompat`: 1=Enable simulation compatibility mode, default is 0. If disabled, the property `Simulation` is hidden from the SGBD file and always 0.  
@@ -74,6 +75,7 @@ If one simulation file should be used for multiple ECUs the ECU address has to b
 ### ECU (wake) address
 With the extended syntax the ECU (wake) address could be specified in every section entry.  
 The address is defined as follows for the different protocols:
+
 * UDS ISO 14229: The address is the 16 bit CAN address.
 * TP2.0: The address is the 8 bit ECU address.
 * KWP 2000, ISO 9141: The address is the 8 bit ECU wake address.

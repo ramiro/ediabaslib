@@ -10,6 +10,7 @@ There is also an external [flashing manual](https://www.sfbmwcoding.com/files/fl
 ![](Build_Bluetooth_D-CAN_adapter_AdapterSmall.png)
 
 Basically two components are required:
+
 * A standard D-CAN/K-Line Adapter. There are multiple manufactures who sell such adapters which are basically identical. I have used one with a PLCC AFT16V8B, because it's easier to replace the chip.
 * A HC-05 Bluetooth board. It's important that it has an integrated 5V to 3.3V power regulator.
 
@@ -20,6 +21,7 @@ A big problem of the standard adapters is the high power consumption which resul
 
 ## Step2: Program the processor
 There is a [replacement firmware](https://github.com/uholeschak/ediabaslib/releases/latest) available that has the following advantages over the standard firmware:
+
 * Faster CAN communication (block size 0 and no separation time).
 * Allows configuration of CAN mode all the time, not only after power on.
 * Allows configuration of the CAN parameters (block size and separation time)

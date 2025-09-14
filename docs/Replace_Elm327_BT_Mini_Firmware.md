@@ -50,6 +50,7 @@ This chapter describes how to replace the ELM327 BT V1.5 HW: V01_M_V2.3 adapter 
 * Connect to XXYYZZ BT device and pair with it (standard pincode: 1234)
 * Connect to the COM port assigned to your BT device
 * When sending strings to the adapter you should at least get an echo from the adapter, otherwise there is a problem with the connections.  
+
 You could test reading the ignition pin with the following command (hex values):  
 `82 F1 F1 FE FE 60`  
 The response is (additionally to the echo):  

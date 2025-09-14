@@ -1,5 +1,6 @@
 # Replacement firmware for ELM327
 There is now a replacement firmware available for ELM327L based Bluetooth and WiFi adapters, that has the following advantages over the standard firmware:
+
 * Faster and more stable CAN communication.
 * K-Line support (all protocols).
 * New: Support for the VAG protocols KWP2000, KWP1281, TP2.0 (cars until 4.2012).
@@ -8,8 +9,9 @@ There is now a replacement firmware available for ELM327L based Bluetooth and Wi
 * Reduced power consumption due to use of sleep mode.
 * Flashing of a modified [ELM327 firmware](#elm327-firmware) is possible.
 * Two firmware versions are available:
-  * Unmodified Bluetooth and WiFi adapter: Baud rate 38400.
-  * Modified Bluetooth adapter (recommended) with replaced [OpenSource Bluetooth firmware](Custom_Bluetooth_firmware.md): Baud rate 115200 and alterable Bluetooth pin (16 digits) and name (31 chars).
+
+    * Unmodified Bluetooth and WiFi adapter: Baud rate 38400.
+    * Modified Bluetooth adapter (recommended) with replaced [OpenSource Bluetooth firmware](Custom_Bluetooth_firmware.md): Baud rate 115200 and alterable Bluetooth pin (16 digits) and name (31 chars).
 
 ![Bluetooth adapter top](Replacement_firmware_for_ELM327_BluetoothAdapterTopSmall.png) ![Bluetooth adapter bottom](Replacement_firmware_for_ELM327_BluetoothAdapterBottomSmall.png)
 
@@ -36,6 +38,7 @@ If the firmware updated failed, use [firmware update failure](#firmware-update-f
 
 ## Use the adapter with INPA, Tool32 or ISTA-D
 You could use the Bluetooth adapter on a windows (10 or higher) PC (with INPA, Tool32 or ISTA-D) as a replacement for an OBD or ADS adapter. The following steps are required to establish the connection:
+
 * Install [.NET Framework 4.8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) or higher, [.NET 8.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0),  
 and [VS C++ Runtime 64 bit](https://aka.ms/vs/17/release/vc_redist.x64.exe) or [VS C++ Runtime 32 bit](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 * For Windows 11: Allow location access for all apps in the system settings to enable WiFi access. ![Location Settings](Location_Settings_Win11.png)
@@ -53,6 +56,7 @@ First programming of PIC18F25K80 microcontroller should be done with a PICkit 3 
 The source for the firmware could be found in the subdirectory `CanAdapterElm`.  
 If not explicitly specified, default LED layout is: (RX LED: PB6, TX LED: BP7).  
 The subdirectory names below are the Bluetooth chip types:
+
 * `default`: For unmodified ELM327L adapter with any Bluetooth chip. Baud rate 38400
 * `def115200`: For ELM327L adapter with any Bluetooth chip but modified baud rate 115200 (E.g. external YC1021 with modified EEPROM)
 * `bc04`: For adapter with BK3231 Bluetooth chip and bc04 firmware
@@ -61,8 +65,9 @@ The subdirectory names below are the Bluetooth chip types:
 * `esp8266`: For adapter with ESP8266 WiFi chip (RX LED: PB5, TX LED: BP7) [Replace ESP8266ex firmware](Replace_Elm327_Wifi_Mini_Firmware.md)
 * `yc1021`: For adapter with integrated YC1021 Bluetooth chip (RX LED: PB6, TX LED: BP4) [Replace YC1021 firmware](Replace_Elm327_BT_Mini_Firmware.md)
 * `spp_uart` and `spp_uart2` (RX LED: PB6, TX LED: BP4): [OpenSource Bluetooth firmware](Custom_Bluetooth_firmware.md) for adapters with BC417 Bluetooth chip (recommended for old Android car radios with Rockchip platform)
-  * `spp_uart.xpv` and `spp_uart.xdv`: Firmware for Bluetooth module with BC417 chipset
-  * `usbspi.dll`: This is a replacement library for _BlueSuite_ and _BlueLab_ for programming CSR BC03/BC04 Bluetooth chipsets via FT232R breakout boards. For more information see the [`ReadMe.txt`](../EdiabasLib/CanAdapterElm/Bluetooth/spp_uart/ReadMe.txt) file.
+
+    * `spp_uart.xpv` and `spp_uart.xdv`: Firmware for Bluetooth module with BC417 chipset
+    * `usbspi.dll`: This is a replacement library for _BlueSuite_ and _BlueLab_ for programming CSR BC03/BC04 Bluetooth chipsets via FT232R breakout boards. For more information see the [`ReadMe.txt`](../EdiabasLib/CanAdapterElm/Bluetooth/spp_uart/ReadMe.txt) file.
 
 There are two firmware files, the complete file (`CanAdapterElm.X.production.unified.hex`) and the update file (`CanAdapterElm.X.production.hex`) without bootloader, that is only needed by the _[Deep OBD app](Deep_OBD_for_BMW_and_VAG.md)_.  
 The latest firmware version will be always included in the _[Deep OBD app](Deep_OBD_for_BMW_and_VAG.md)_.  

@@ -1,6 +1,7 @@
 # Configuration generator
 The configuration generator is a tool that simplifies generation of [XML configuration files](Page_specification.md).  
 The generator options menu has the following entries:
+
 * _Interface_: If a configuration has been loaded on the main page, the same communication interface is also used by the generator as default. With this menu entry a different communication interface could be selected.  
 For testing without a vehicle, the interface type _Simulation_ has to be selected. In this case selection of a valid simulation directory containing `.sim` files is also required.
 * _Simulation directory_: If the interface type _Simulation_ has been selected, this menu entry allows to select the simulation directory.  
@@ -16,6 +17,7 @@ If no [simulation files](EdiabasLib.simulation_file.md) are present in the selec
 ![INPA info page](Configuration_Generator_InpaInfo.png)
 
 `.GRP` file name is `D_MOTOR.GRP` and `.PRG` file name is `D60M47A0.PRG`
+
 * _Data logging_: Selecting this menu entry will open a sub menu with multiple data logging options:
 	* _Create trace file_: If the checkbox of this menu is active, a `ifh.trc` file will be created when executing jobs. The trace file will be created in the `LogConfigTools` subdirectory.
 	* _Append trace file_: If this checkbox is enabled the trace file is always appended. Otherwise the trace file will be overridden after selection of a vehicle type.
@@ -34,6 +36,7 @@ If the analysis is successful, the detected ECUs are listed and the VIN is displ
 If an ECU is completely silent (defective) it will not show up in the list!  
 After selecting an ECU list entry it's Job page will be displayed. This is the main configuration page for the jobs results that will be added to the configuration file.  
 The page has the following properties:
+
 * _Search field_: With the search field in the title bar it's possible to filter jobs and results that match the filter text.  
 It's either possible to filter the jobs or the results, depending from last selected item type (job or result).  
 When changing the item type, the search filter is cleared and closed.
@@ -47,6 +50,7 @@ When changing the item type, the search filter is cleared and closed.
 * _Display text_: This is the text that will be displayed on the page beside the job result.
 * _Display order_: Here the index of the display order could be specified. The default value is 0. If two values are identical, the original order is retained.
 * _Graphical design_: If _Display type_ is set to _Graphical display_ this settings will get visible. The following design types are available:
+
     * _Hidden_: The result will not be displayed. If the result value type is not `integer` or `real` this is the only option.
     * _Simple gauge square_: A simple gauge with square border will be displayed.
     * _Simple gauge round_: A simple gauge with round border will be displayed.

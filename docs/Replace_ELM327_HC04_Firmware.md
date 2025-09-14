@@ -17,10 +17,12 @@ From left to right: `MCLR` (orange), `5V` (green), `GND` (yellow), `PGD` (purple
 ## Step1: Get the needed software:
 
 **Option 1 (Recommended):**
+
 1. Download [MPLAB X IDE](https://www.microchip.com/mplab/mplab-x-ide) and install it, start MPLAB X IPE and select device `PIC18F25K80`.
 2. Go to the Step2.
 
 **Option 2:**
+
 1. Download and install the [PICkit™ 3 Programming App and Scripting Tool v3.10](https://microchipdeveloper.com/pickit3:scripttool)
 2. Edit the `PICkit3.ini` in the folder where the tool has been installed and add the following lines to the end of it:
 ```

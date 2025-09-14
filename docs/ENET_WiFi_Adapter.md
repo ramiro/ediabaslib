@@ -1,6 +1,7 @@
 # ENET WiFi Adapter
 For the BMW F-series or higher there **was** a WiFi adapter available, that allows to communicate directly using the BMW ENET protocol.  
 It is based on the hardware of an [A5-V11 3G/4G Router](https://wiki.openwrt.org/toh/unbranded/a5-v11). The adapter has the following features:
+
 * MediaTek/Ralink RT5350F processor with 350MHz
 * DC/DC converter for improved power consumption
 * With additional CPU heat sink for over temperature protection
@@ -44,6 +45,7 @@ You have to open the adapter and press the reset button after the adapter has bo
 
 ## Use the adapter with INPA, Tool32 or ISTA-D
 You could use the ENET WiFi adapter on a windows PC with INPA, Tool32 or ISTA-D as a replacement for an ENET adapter cable. The following steps are required to establish the connection:
+
 * Install [.NET Framework 4.8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) or higher, [.NET 8.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0),  
 and [VS C++ Runtime 64 bit](https://aka.ms/vs/17/release/vc_redist.x64.exe) or [VS C++ Runtime 32 bit](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 * For Windows 11: Allow location access for all apps in the system settings to enable WiFi access. ![Location Settings](Location_Settings_Win11.png)

@@ -23,6 +23,7 @@ Basically the _Deep OBD app_ can operate in two modes, either BMW or VAG. You ha
 
 ## Supported adapters
 The _Deep OBD app_ supports several OBD II adapters:
+
 * Standard FTDI based USB "INPA compatible" D-CAN/K-Line adapters (all protocols)
 * ELM327 based Bluetooth and WiFi adapters. Recommended ELM327 versions are 1.4b, 1.5 and origin 2.1, which are based on PIC18F25K80 processor (no MCP2515 chip) (D-CAN protocol only) 
 * Custom [Bluetooth D-CAN/K-Line adapter](Build_Bluetooth_D-CAN_adapter.md) (BMW-FAST protocol over D-CAN and K-Line)
@@ -38,6 +39,7 @@ Before connecting to the vehicle via Bluetooth a [Bluetooth adapter](Build_Bluet
 
 ### Your first configuration
 Follow the next steps to generate your first configuration (BMW):
+
 * Open the [Configuration generator](Configuration_Generator.md) from the main menu
 * In the generator menu select the correct interface type and [Bluetooth adapter](Build_Bluetooth_D-CAN_adapter.md) if needed.
 * Press the _Read_ button and wait until the ECU list is populated.
@@ -56,6 +58,7 @@ You could test reading the value with _Test_ button below.
 
 ## The main menu
 The application has a configuration menu with the following options:
+
 * _Manufacturer_: Select the car manufacturer with this menu point first. The default is BMW, the other manufacturers are from the VAG group (VW, Audi, Skoda). The VAG mode is still experimental, only for vehicles until 2017-08 and requires a [Bluetooth D-CAN/K-Line adapter](Build_Bluetooth_D-CAN_adapter.md).
 * _Adapter_: With this menu the [Bluetooth adapter](Build_Bluetooth_D-CAN_adapter.md) could be selected.  If the device is not paired already, searching for new devices is possible. This menu is only enabled if a configuration with _interface_ type _BLUETOOTH_ has been selected.
 * _Adapter configuration_: When using a FTDI USB or Bluetooth (non ELM327) adapter, this menu item opens the adapter configuration page. The following settings are available (depending from adapter type):
@@ -135,6 +138,7 @@ Android Auto is now available in the release version of the _Deep OBD app_.
 Visual Studio Android settings.  
 It's recommended to install and configure Android Studio before and then use a common configuration.  
 Update the components in Android Studio only.
+
 * Java SDK location: Microsoft: `C:\Program Files\Microsoft\jdk-17.0.8.101-hotspot` or custom: `C:\Program Files\Java\jdk-11.0.12`
 * Android SDK location: `C:\Users\<user>\AppData\Local\Android\android-sdk`
 * Archive location: `C:\Users\<user>\AppData\Local\Xamarin\Mono for Android\Archives`

@@ -1,6 +1,7 @@
 # Defining pages for _Deep OBD for BMW and VAG_
 Each page (tab) is defined in a single XML (`*.ccpage`) file. A general documentation of all XML tags could be found in the `BmwDeepObd.xsd` file. The documentation will be displayed in the XML editor when the `.xsd` is added as a schema instance reference in the XML file.  
 Table of contents:
+
 * [Simple jobs](#simple-jobs)
 * [Reading errors](#reading-errors)
 * [User defined code](#user-defined-code)
@@ -103,6 +104,7 @@ The `strings` nodes contains the all the string used on this display page. If th
 
 The `jobs` node groups all EDIABAS jobs to execute. The property `sgbd` specifies the name of the group (`.grp`) or the sgbd (`.prg`) file to use. In VAG mode the property `mwtab` could be used to store the file name of the associated mwtab file.  
 Within the `jobs` node multiple `job` nodes specify the EDIABAS jobs to execute. They contain the following properties:
+
 * `name`: Name of the job to execute
 * `id`: Id for job result identification. If this element is specified the result name will be: `[id]#[data set index]#[result]`, otherwise it's: `[name]#[result]`.
 * `sgbd`: Name of the SGBD file to load. This overrides the SGBD file from the `jobs` node. It's recommended to combine this with the id attribute.
@@ -122,6 +124,7 @@ Within the `jobs` node multiple `job` nodes specify the EDIABAS jobs to execute.
 * `max-value`: For gauge views the maximum value is specified with this attribute.
 * `log_tag=<tag name>`: Adding this property allows to log the display data to a log file when activating the _Log data_ menu in the application. The `logfile` property in the `page` node has to be specified as well to activate logging.
 * Each `display` node specifies one line of the display output. `Name` is again a reference to the text translation in the _strings_ nodes. With `result` the EDIABAS job result name is selected, that contains the data. The `format` property allows to format the result with the EDIABAS aspiResultText format specification [EDIABAS result types and formats](EDIABAS_result_types_and_formats.md).
+
 The `page` node can optionally contain `display` nodes like the `job` node. They will be only used for [User defined code](#user-defined-code).  
 This is how the resulting page will look like:
 
@@ -375,6 +378,7 @@ public static bool ShowNotification(Context context, int id, int priority, strin
 public static bool HideNotification(Context context, int id);
 ```
 The functions arguments are:
+
 * `context`: The current application context.
 * `id`: The notification id. It should be a value in the range of 0 and 9999. The same value must be used for `ShowNotification` and `HideNotification`.
 * `priority`: The notification priority in the range of -2 to 2.
@@ -737,10 +741,11 @@ Now all `*.page` or `*.pages` can be added to a configuration file `*.cccfg`. Th
 # Broadcasts
 The received OBD data could be broadcasted to other apps if broadcast sending is enabled in the [global settings](GlobalSettings.md). This way it's possible to display or process data individually.  
 The broadcast name is `de.holeschak.bmw_deep_obd.Notification.Info`. It contains the following intent data:
+
 * `action` (string): Change of operation status:
-  * `connect`: OBD connection is connected.
-  * `disconnect`: OBD connection is disconnected.
-  * `page_change`: The current display page changes.
+    * `connect`: OBD connection is connected.
+    * `disconnect`: OBD connection is disconnected.
+    * `page_change`: The current display page changes.
 * `obd_data` (string): JSON object that contains the current OBD data. It has the following format:
 ``` json5
 {
@@ -762,6 +767,7 @@ The broadcast name is `de.holeschak.bmw_deep_obd.Notification.Info`. It contains
 ```
 Additionally the broadcast `de.holeschak.bmw_deep_obd.Action.Command` could be received by the App.  
 The following intent data is defined:
+
 * `action` (string): Action to be processed by the app:
   * `new_page:<page_name>`: Switches to the new page (configuration) with the name `<page_name>`. `<page_name>` is the name in the node `<page name ="page_name">`.
 
@@ -769,6 +775,7 @@ The broadcast could be also received by the [`BroadcastReceived`](#receiving-bro
 
 # Special jobs
 There are some job, that require special handling:
+
 * With `STATUS_MESSWERTBLOCK_LESEN` or `STATUS_BLOCK_LESEN` multiples values could be requested simultaneously.  
   The job requires the entries from the table `MESSWERTETAB` or `SG_FUNKTIONEN` with column `ARG` as argument.  
   The first argument `JA` or `NEIN` specifies if the last ECU request is reused.  

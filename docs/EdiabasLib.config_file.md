@@ -51,6 +51,7 @@ The standard ICOM configuration page could be found at: `http://XXXX:58000` (no 
 ## FTDI D2XX driver properties
 Android supports access to FTDI USB D-CAN/K-Line adapters directly. For the PC platform use the COM port to access the adapter.  
 There are the following ways the select the USB device:
+
 * `FTDIx`: select device by index x (starting with 0)
 * `FTDI:SER=[serial number](serial-number)`: select device by serial number
 
