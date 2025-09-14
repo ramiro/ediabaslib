@@ -4,7 +4,7 @@ There is now a replacement firmware available for ELM327L based Bluetooth and Wi
 * K-Line support (all protocols).
 * New: Support for the VAG protocols KWP2000, KWP1281, TP2.0 (cars until 4.2012).
 * Contains a bootstrap loader that allows firmware update without opening the device.
-* Firmware updates are possible with the _[Deep OBD app](Deep_OBD_for_BMW_and_VAG.md)_, if the replacement firmware [has already been programmed](#programming-of-the-processor).
+* Firmware updates are possible with the _[Deep OBD app](Deep_OBD_for_BMW_and_VAG.md)_, if the replacement firmware [has already been programmed](#programming-elm327-adapter-with-deep-obd-firmware).
 * Reduced power consumption due to use of sleep mode.
 * Flashing of a modified [ELM327 firmware](#elm327-firmware) is possible.
 * Two firmware versions are available:
