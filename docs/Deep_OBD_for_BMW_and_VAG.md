@@ -16,7 +16,7 @@ Table of contents:
 * [Log and trace files location](#log-and-trace-files-location)
 * [Android Auto](#android-auto)
 * [Background image](#background-image)
-* [Request to delete data send by the app](Deep_OBD_Data_Delete_Request.md)
+* [Request to delete data sent by the app](Deep_OBD_Data_Delete_Request.md)
 
 ## Manufacturers
 Basically the _Deep OBD app_ can operate in two modes, either BMW or VAG. You have to select the car manufacturer first. The VAG group mode (VW, Audi, Seat, Skoda) is still experimental and only supports the protocols KPW2000, KWP1281 and TP2.0. A [Replacement firmware for ELM327](Replacement_firmware_for_ELM327.md) adapter is required for this mode.
