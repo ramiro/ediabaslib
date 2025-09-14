@@ -2,7 +2,7 @@
 
 This chapter describes how to replace the ELM327 BT V1.5 HW: V01_M_V2.3 adapter PIC18F25K80 firmware and YC1021 BT settings.  
 
-### Requirements:
+## Requirements:
 
 * [ELM327 BT V1.5 HW: V01_M_V2.3 adapter](https://www.aliexpress.com/item/New-OBDII-Diagnostic-Interface-Super-ELM327-Bluetooth-V1-5-Hardware-PIC18F25K80-Chip-1PCB-Board-ELM-327/32846998449.html) (or equivalent)
 * EZP2010/TL866II Plus/CH341A Eeprom programmer with SOIC8 (150mil) programming clip

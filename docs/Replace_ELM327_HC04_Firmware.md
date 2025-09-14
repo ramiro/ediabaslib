@@ -2,7 +2,7 @@
 
 This document describes how to replace ELM327 adapter firmware
 
-### Hardware Requirements:
+## Hardware Requirements:
 
 * ELM327 adapter with PIC18F25K80 chip. For the best models to buy from aliexpress, search PIC18F25K80 ELM37 and refer to https://github.com/uholeschak/ediabaslib/issues/39
 * PICkit 3 or 4 programmer

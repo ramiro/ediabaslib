@@ -800,7 +800,7 @@ The following intent data is defined:
 
 The broadcast could be also received by the [`BroadcastReceived`](#receiving-broadcasts-broadcastreceived) user function.
 
-# Special jobs
+## Special jobs
 There are some job, that require special handling:
 
 * With `STATUS_MESSWERTBLOCK_LESEN` or `STATUS_BLOCK_LESEN` multiples values could be requested simultaneously.  

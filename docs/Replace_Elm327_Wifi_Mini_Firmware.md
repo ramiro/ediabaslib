@@ -2,13 +2,13 @@
 
 This chapter describes how to replace the ELM327 Wifi V1.5 HW: V01W_M_V1.0 adapter PIC18F25K80 and ESP8266ex firmware.  
 
-### Requirements:
+## Requirements:
 
 * ELM327 Wifi V1.5 HW: V01W_M_V1.0 adapter
 * Usb to serial with 3.3v I/O
 * PicKit 3/4 (to program the PIC18F25K80)
 
-### ELM327 Wifi V1.5 HW: V01W_M_V1.0 board connections:
+## ELM327 Wifi V1.5 HW: V01W_M_V1.0 board connections:
 
 [![ELM327 Wifi V1.5 HW: V01W_M_V1.0 board programming connections big](elm327_wifi_annotated_esp8266x_and_pic18f25k80_prog_connections_Small.png "ELM327 Wifi V1.5 HW: V01W_M_V1.0 board programming connections")](elm327_wifi_annotated_esp8266x_and_pic18f25k80_prog_connections_Big.png)
 
