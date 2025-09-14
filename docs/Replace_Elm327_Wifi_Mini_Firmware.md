@@ -16,10 +16,10 @@ This chapter describes how to replace the ELM327 Wifi V1.5 HW: V01W_M_V1.0 adapt
 * Connect your Usb to serial (take care ESP8266ex is not 5v tolerant!) to U0RXD (connects to TX), U0TXD (connects to RX) and GND
 * Connect GPIO0 to GND (this forces the ESP8266ex into bootloader on next bootup). The reset test point is not usable, because it's connected to an output signal on the board.
 * Connect MCLR to GND to force the PIC18F in high-Z (you could also use the PicKit programmer to keep the processor in reset)
-* Power the Elm327 adapter
+* Power the ELM327 adapter
 * Flash ESP-link firmware to the ESP8266ex using the instructions for 8Mbit/1MByte flash from [ESP-link serial flashing](https://github.com/jeelabs/esp-link/blob/master/FLASHING.md#initial-serial-flashing)
 * Command line for flashing: `python.exe esptool.py --port COMX --baud 460800 write_flash -fs 1MB -ff 40m 0x00000 boot_v1.X.bin 0x01000 user1.bin 0xfc000 esp_init_data_default.bin 0xfe000 blank.bin`
-* Disconnect GPIO0 from GND (all others stay), Power cycle the Elm327 adapter, connect to `ESP_XXYYZZ` WiFi network.
+* Disconnect GPIO0 from GND (all others stay), Power cycle the ELM327 adapter, connect to `ESP_XXYYZZ` WiFi network.
 * Using the browser, browse to `192.168.4.1`.
 * At the _Home_ screen in the pin assignment set UART pins to `normal`, all other `disabled` and RX pull-up enabled.  
 * Optionally set the Hostname to `deepobd`.
@@ -32,12 +32,12 @@ This chapter describes how to replace the ELM327 Wifi V1.5 HW: V01W_M_V1.0 adapt
 
 ## Step2: Program the PIC18F25K80
 * Connect your PicKit 3/4 to MCLR, PGD, PGC, GND (Vss) and 5V (Vcc) (take care, do not apply power from PicKit 3/4)
-* Power the Elm327 adapter
+* Power the ELM327 adapter
 * From subdirectory `CanAdapterElm` select either `default` firmware when using baudrate 38400 (take care slightly misallocated led usage) or `wifi_esp8266ex (correct name/fill)` (recommended) when using 115200 baudrate, always use `CanAdapterElm.X.production.unified.hex` for this first upload
 * Flash the selected firmware to the PIC18F25K80
 
 ## Step3: Testing
-* Power the Elm327 adapter
+* Power the ELM327 adapter
 * Connect to `ESP_XXYYZZ` WiFi network
 * Telnet/Putty to 192.168.4.1 port 23 (use a program that allows hex display, send and receive)
 * When sending strings to the adapter you should at least get an echo from the adapter, otherwise there is a problem with the connections.  

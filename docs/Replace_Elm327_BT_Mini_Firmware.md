@@ -41,12 +41,12 @@ This chapter describes how to replace the ELM327 BT V1.5 HW: V01_M_V2.3 adapter 
 
 ## Step2: Program the PIC18F25K80
 * Connect your PicKit 3/4 to MCLR, PGD, PGC, GND (Vss) and 5V (Vcc) (take care, do not apply power from PicKit 3/4)
-* Power the Elm327 adapter (from obd side)
+* Power the ELM327 adapter (from obd side)
 * From subdirectory `CanAdapterElm` select either `default` (baudrate 38400), `def115200` (baudrate 115200) or `yc1021` firmware (recommended for non standard LED allocation) (baudrate 115200), always use `CanAdapterElm.X.production.unified.hex` for this first upload
 * Flash the selected firmware to the PIC18F25K80
 
 ## Step3: Testing
-* Power the Elm327 adapter
+* Power the ELM327 adapter
 * Connect to XXYYZZ BT device and pair with it (standard pincode: 1234)
 * Connect to the COM port assigned to your BT device
 * When sending strings to the adapter you should at least get an echo from the adapter, otherwise there is a problem with the connections.  
