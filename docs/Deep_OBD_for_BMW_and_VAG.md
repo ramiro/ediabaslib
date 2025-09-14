@@ -1,7 +1,9 @@
 # Deep OBD app
 This page describes how to use _Deep OBD app_.  
 Download app from Google Play: [https://play.google.com/store/apps/details?id=de.holeschak.bmw_deep_obd](https://play.google.com/store/apps/details?id=de.holeschak.bmw_deep_obd)  
+
 Table of contents:
+
 * [Manufacturers](#manufacturers)
 * [Supported adapters](#supported-adapters)
 * [First start](#first-start)
@@ -87,7 +89,7 @@ If the port is omitted in the IP settings, the default port is 23 in hotspot mod
 	* _Reset XML editor_: Resets the last selected XML editor. A new editor has be to be selected again when editing files.
 	* _Close_: Close the current configuration.
 * _Configuration generator_: Simple [XML configuration files](Page_specification.md) could be generated automatically using the informations obtained from the vehicle. This menu opens the [configuration generator](Configuration_Generator.md) which allows to create new or modify existing XML files by simply selecting the ECU and job informations.
-* _Ediabas tool_: This is a port of the tool32.exe windows application. Selecting the menu will open the [Ediabas tool](EdiabasTool.md) page.
+* _Ediabas tool_: This is a port of the `tool32.exe` windows application. Selecting the menu will open the [Ediabas tool](EdiabasTool.md) page.
 * _Coding_: This submenu allow to access the [BMW coding](BMW_Coding.md) online service.
 * _Extract ECU files_: The ECU files are very large, so they have to be extracted at first app start. With this menu item files could be extracted again. An internet connection is required to check for update information.
 * _Data logging_: Selecting this menu entry will open a sub menu with multiple data logging options:

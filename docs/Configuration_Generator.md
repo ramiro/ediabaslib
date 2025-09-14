@@ -72,6 +72,7 @@ When changing the item type, the search filter is cleared and closed.
   * _Security access_: (VAG only) Execute security access functions.
 
 With the _Save_ button on the main configuration page the configuration will be stored and used as default on the main page.
+
 Hint: A long click on the ECU list opens a submenu that allows to change the order of the ECU entries in the list.
 
 ![ECU list](Configuration_Generator_AppGeneratorEcusSmall.png) ![Job selection](Configuration_Generator_AppGeneratorJobSmall.png)

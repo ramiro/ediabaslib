@@ -25,10 +25,12 @@ From left to right: `MCLR` (orange), `5V` (green), `GND` (yellow), `PGD` (purple
 
 1. Download and install the [PICkit™ 3 Programming App and Scripting Tool v3.10](https://microchipdeveloper.com/pickit3:scripttool)
 2. Edit the `PICkit3.ini` in the folder where the tool has been installed and add the following lines to the end of it:
-```
-TMEN:
-REVS: Y
-```
+
+    ```
+    TMEN:
+    REVS: Y
+    ```
+
 3. Download the File `PKPlusDeviceFile.dat` from https://sourceforge.net/projects/pickit3plus/
 4. Delete original `PK2DeviceFile.dat` in the tool folder, and rename `PKPlusDeviceFile.dat` to `PK2DeviceFile.dat`
 5. Start PICkit 3 v3.01
@@ -37,7 +39,7 @@ REVS: Y
 * Connect your PICkit 3/4 to the test points on the board of ELM327 adapter (see photo above)
 * Connect 12V (pin 16) and GND (pin 4) from power supply to ELM327 ODB2 connector: https://www.obd-2.de/stecker-belegungen.html
 * Take `CanAdaapterElm.X.production.unified.hex` from `hc04` folder of the [latest binary](https://github.com/uholeschak/ediabaslib/releases/latest) package
-* Try to flash CanAdaapterElm.X.production.unified.hex. If it fails with the error "Cannot flash Device-ID", then edit it using Tools->Testmemory to the value in the original hex-file
+* Try to flash `CanAdaapterElm.X.production.unified.hex`. If it fails with the error "Cannot flash Device-ID", then edit it using Tools->Testmemory to the value in the original hex-file
 
 ## Step3: Testing
 * Repower ELM327 adapter, connect to it over Bluetooth and make a pair with it (standard PIN: `1234`)
