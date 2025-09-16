@@ -48,7 +48,10 @@ You could use the ENET WiFi adapter on a windows PC with INPA, Tool32 or ISTA-D 
 
 * Install [.NET Framework 4.8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) or higher, [.NET 8.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0),  
 and [VS C++ Runtime 64 bit](https://aka.ms/vs/17/release/vc_redist.x64.exe) or [VS C++ Runtime 32 bit](https://aka.ms/vs/17/release/vc_redist.x86.exe).
-* For Windows 11: Allow location access for all apps in the system settings to enable WiFi access. ![Location Settings](Location_Settings_Win11.png)
+* For Windows 11: Allow location access for all apps in the system settings to enable WiFi access.
+
+    ![Location Settings](Location_Settings_Win11.png)
+
 * Optionally connect the ENET adapter with the PC. The PC automatically gets an IP address from the adapter DHCP server.
 * If the vehicle is connected directly to your local network (with a DHCP server present) the vehicle will get an IP address from the DHCP server.
 * Download the [latest binary](https://github.com/uholeschak/ediabaslib/releases/latest) package and extract the .zip file. Start `EdiabasLibConfigTool\EdiabasLibConfigTool.exe` and follow the instructions in the status window: Search the adapter, select it, optionally click `Connect`, click `Check Connection` and patch the required EDIABAS installations.
