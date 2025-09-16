@@ -10,7 +10,7 @@ This document describes how to replace ELM327 adapter firmware
 
 ### ELM327 board connections:
 
-[![ELM327 HC04](hc04-pinout.jpg "ELM327")](hc04-pinout.jpg)
+![ELM327 HC04](hc04-pinout.jpg "ELM327")
 
 From left to right: `MCLR` (orange), `5V` (green), `GND` (yellow), `PGD` (purple), `PGC` (blue)
 
